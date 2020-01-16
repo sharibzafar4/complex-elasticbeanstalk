@@ -3,7 +3,7 @@ services:
     - docker
 
 before_install:
-    - docker build -t sharibzafar4/react-test -f ./client/dockerfile.dev ./client
+    - docker build -t sharibzafar4/react-test -f ./client/Dockerfile.dev ./client
 
 script:
     - docker run -e CI=true sharibzafar4/react-test npm test -- --covergae
