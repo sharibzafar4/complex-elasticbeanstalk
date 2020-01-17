@@ -20,3 +20,16 @@ after_success:
     - docker push sharibzafar4/multi-nginx
     - docker push sharibzafar4/multi-server
     - docker push sharibzafar4/multi-worker
+
+deploy:
+    provider: elasticbeanstalk
+    region: "us-east-1"
+    app: "multi-docker-prod"
+    env: "MultiDockerProd-env"
+    bucket_name: "elasticbeanstalk-us-east-1-183236966505"
+    bucket_path: "docker-multi-prod"
+    on:
+        branch: master
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key:
+        secure: "$AWS_SECRET_ACCESS_KEY"
