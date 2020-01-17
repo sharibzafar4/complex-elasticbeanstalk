@@ -18,14 +18,6 @@ function App() {
             <Route exact path = "/" component= {Fib}/>
             <Route exact path = "/otherpage" component= {OtherPage}/>
           </div>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
         </header>
       </div>
     </Router>

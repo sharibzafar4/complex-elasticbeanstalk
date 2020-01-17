@@ -61,11 +61,12 @@ class Fib extends Component {
                     />
                     <button>Submit</button>
                 </form>
-
-                <h3>Indexes I have seen:</h3>
+            </div>
+            <div style="clear: both">
+                <h3 style="float: left">Indexes I have seen:</h3>
                 {this.renderSeenIndexes()}
 
-                <h3>Calculated Values:</h3>
+                <h3 style="float: right">Calculated Values:</h3>
                 {this.rederValues()}
             </div>
         );
